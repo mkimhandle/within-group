@@ -60,7 +60,7 @@ a:hover{ text-decoration:underline; }
   width:auto;
   display:block;
 
-  transform: scale(1.8);
+  transform: scale(2.2);
   transform-orgin: left center;
 
   will-change: transform;
@@ -189,6 +189,7 @@ a:hover{ text-decoration:underline; }
 }
 
 .legal{ margin-top:8px; }
+
 
 
 
