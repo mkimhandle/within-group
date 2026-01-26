@@ -56,11 +56,11 @@ a:hover{ text-decoration:underline; }
 }
 
 .brand-logo{
-  height:32px;
+  height:18px;
   width:auto;
   display:block;
 
-  transform: scale(1.2);
+  transform: scale(1);
   transform-orgin: left center;
 
   will-change: transform;
@@ -189,6 +189,7 @@ a:hover{ text-decoration:underline; }
 }
 
 .legal{ margin-top:8px; }
+
 
 
 
