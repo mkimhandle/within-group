@@ -51,19 +51,14 @@ a:hover{ text-decoration:underline; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:12px 0;
+  padding:14px 0;
   gap:16px;
 }
 
 .brand-logo{
-  height:18px;
+  height:32px;
   width:auto;
   display:block;
-
-  transform: scale(1);
-  transform-orgin: left center;
-
-  will-change: transform;
 }
 
 /* Sections */
@@ -189,11 +184,3 @@ a:hover{ text-decoration:underline; }
 }
 
 .legal{ margin-top:8px; }
-
-
-
-
-
-
-
-
