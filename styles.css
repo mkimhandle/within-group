@@ -45,6 +45,7 @@ a:hover{ text-decoration:underline; }
   background: rgba(247,249,252,0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
 .header-inner{
@@ -184,3 +185,4 @@ a:hover{ text-decoration:underline; }
 }
 
 .legal{ margin-top:8px; }
+
