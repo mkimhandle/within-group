@@ -54,13 +54,29 @@ a:hover{ text-decoration:underline; }
   justify-content:space-between;
   padding:14px 0;
   gap:16px;
+
+  flex-wrap: nowrap;      /* keep logo + CTA on one line */
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  min-width: 0;           /* allow logo to shrink on small screens */
 }
 
 .brand-logo{
   height:32px;
   width:auto;
   display:block;
+
+  max-width: 60vw;        /* prevents logo from pushing CTA off-screen */
 }
+
+.site-header .email-link{
+  margin-left:auto;       /* pins CTA to the far right */
+  white-space:nowrap;     /* prevents breaking into multiple lines */
+}
+
 
 /* Sections */
 .section{ padding:72px 0; }
@@ -316,6 +332,7 @@ input, textarea{
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
 
 
 
