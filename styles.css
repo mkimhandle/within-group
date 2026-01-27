@@ -307,15 +307,17 @@ input, textarea{
 /* Scroll reveal animation */
 .reveal{
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(18px) scale(0.985);
   transition: opacity 450ms cubic-bezier(.2,.8,.2,1),
               transform 450ms cubic-bezier(.2,.8,.2,1);
 }
 
 .reveal.visible{
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
+
+
 
 
 
