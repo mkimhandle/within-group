@@ -186,3 +186,27 @@ a:hover{ text-decoration:underline; }
 
 .legal{ margin-top:8px; }
 
+.email-link{
+  font-size:14px;
+  font-weight:600;
+  color: var(--blue);
+  letter-spacing:0.2px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+
+.email-link:hover{
+  text-decoration:underline;
+}
+
+.arrow{
+  font-size:16px;
+  line-height:1;
+  transition: transform 0.2s ease;
+}
+
+.email-link:hover .arrow{
+  transform: translateX(4px);
+}
+
