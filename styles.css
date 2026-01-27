@@ -115,35 +115,39 @@ a:hover{ text-decoration:underline; }
 
 .hero-inner{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:24px;
-  text-align:center;
-}
-
-/* Center column */
-.hero-center{
-  flex: 1 1 auto;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
   justify-content:center;
 }
 
-/* Right CTA */
-.hero-cta-right{
-  flex: 0 0 auto;
+.hero-content{
+  width:100%;
+  max-width:760px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-/* Mobile: stack everything nicely */
+/* Centered text */
+.hero-center{
+  text-align:center;
+}
+
+/* CTA row */
+.hero-cta{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;  /* pushes CTA to the right */
+  margin-top:18px;
+}
+
+/* Mobile */
 @media (max-width: 768px){
-  .hero-inner{
-    flex-direction:column;
-    text-align:center;
+  .hero-content{
+    max-width:100%;
   }
 
-  .hero-cta-right{
-    margin-top:16px;
+  .hero-cta{
+    justify-content:center;
+    margin-top:14px;
   }
 }
 
@@ -375,6 +379,7 @@ input, textarea{
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
 
 
 
