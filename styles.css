@@ -210,3 +210,97 @@ a:hover{ text-decoration:underline; }
   transform: translateX(4px);
 }
 
+
+/* ---------- Subtle transitions / polish ---------- */
+
+/* Global motion tokens (easy to tune) */
+:root{
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --t-fast: 150ms;
+  --t: 220ms;
+}
+
+/* Slightly smoother overall text rendering */
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle page fade-in */
+body{
+  animation: wgFadeIn var(--t) var(--ease) both;
+}
+@keyframes wgFadeIn{
+  from { opacity: 0; transform: translateY(2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Header feels more “anchored” */
+.site-header{
+  transition: box-shadow var(--t) var(--ease), border-color var(--t) var(--ease);
+  box-shadow: 0 6px 18px rgba(11,58,120,0.04);
+}
+
+/* Links: more refined hover */
+a{
+  transition: color var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease);
+}
+
+/* If you're using .email-link (header/footer) */
+.email-link{
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+.email-link:hover{
+  opacity: 0.92;
+}
+.email-link:active{
+  transform: translateY(1px);
+}
+
+/* Arrow motion (↗) */
+.arrow{
+  transition: transform var(--t) var(--ease);
+}
+.email-link:hover .arrow{
+  transform: translate(2px, -2px);
+}
+
+/* Buttons (if you still have .btn anywhere) */
+.btn{
+  transition: transform var(--t-fast) var(--ease),
+              filter var(--t-fast) var(--ease),
+              box-shadow var(--t-fast) var(--ease);
+  box-shadow: 0 10px 26px rgba(11,58,120,0.10);
+}
+.btn:hover{
+  filter: brightness(1.03);
+  transform: translateY(-1px);
+}
+.btn:active{
+  transform: translateY(1px);
+  box-shadow: 0 6px 16px rgba(11,58,120,0.08);
+}
+
+/* Cards: tiny lift on hover (keeps it premium) */
+.card{
+  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease);
+}
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(11,58,120,0.08);
+}
+
+/* Inputs (if you add any later): smoother focus */
+input, textarea{
+  transition: box-shadow var(--t) var(--ease), border-color var(--t) var(--ease);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
