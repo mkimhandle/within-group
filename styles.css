@@ -129,16 +129,8 @@ a:hover{ text-decoration:underline; }
 .hero .hero-cta-row{
   width: 100%;
   display: flex;
-  justify-content: flex-end;  /* desktop: button to the right */
+  justify-content: center;  /* desktop: button to the right */
   margin-top: 18px;
-}
-
-/* mobile: center the CTA below text */
-@media (max-width: 768px){
-  .hero .hero-cta-row{
-    justify-content: center;
-    margin-top: 14px;
-  }
 }
 
 /* Typography */
@@ -376,6 +368,7 @@ input, textarea{
   margin-left: auto;
   margin-right: auto;
 }
+
 
 
 
