@@ -326,15 +326,6 @@ a{
   box-shadow: 0 6px 16px rgba(11,58,120,0.08);
 }
 
-/* Cards: tiny lift on hover (keeps it premium) */
-.card{
-  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease);
-}
-.card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(11,58,120,0.08);
-}
-
 /* Inputs (if you add any later): smoother focus */
 input, textarea{
   transition: box-shadow var(--t) var(--ease), border-color var(--t) var(--ease);
@@ -409,6 +400,7 @@ input, textarea{
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
 
 
 
