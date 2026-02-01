@@ -1,14 +1,21 @@
 # Within Group
 
-**Built from Within**
+This repository contains the source code for the official website of **Within Group LLC**.
 
-Within Group is an advisory and sourcing firm focused on real estate transactions.  
-The website is designed to be simple, institutional, and informational, reflecting our approach to clarity, discretion, and execution.
+Within Group is a transaction coordination and facilitation firm focused on real estate. The website provides a high-level overview of the firm’s positioning, areas of focus, and contact information.
 
-This site serves as a digital presence to:
-- Establish legitimacy and brand identity  
-- Communicate our focus and operating philosophy  
-- Provide a direct channel for inquiries via email  
+---
+
+## Website Purpose
+
+The site is designed to:
+
+- Present the Within Group brand and identity
+- Provide clarity on the firm’s two primary areas of focus
+- Offer a simple and professional point of contact
+- Maintain a calm, structured, and informational tone
+
+This is an informational website only and does not provide investment advice or offer securities.
 
 ---
 
@@ -22,6 +29,7 @@ https://within-group.com/
 
 ## Structure
 
+The site is a lightweight static website built with:
 
 - `index.html`  
   Contains all website content and layout.
@@ -29,8 +37,11 @@ https://within-group.com/
 - `styles.css`  
   Defines typography, colors, spacing, and overall visual design.
 
+- Minimal JavaScript
+  optional visual effects only
+
 - `assets/`  
-  Stores all branding assets including logos and favicons.
+  Stores all branding assets, including logos and favicons.
 
 ---
 
@@ -51,6 +62,16 @@ mailto:info@within-group.com
 
 
 This approach prioritizes simplicity, privacy, and direct communication.
+
+---
+
+## Sections
+
+- **Header** – Logo and contact email
+- **Hero** – Brand statement and subtitle
+- **What’s Within** – Two-lane overview of areas of focus
+- **Start a Conversation** – Contact call-to-action
+- **Footer** – Company information and legal disclaimer
 
 ---
 
