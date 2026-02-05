@@ -429,6 +429,55 @@ input, textarea{
   }
 }
 
+/* -------------------------
+   PROCESS STEPS GRID
+-------------------------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* -------------------------
+   WHY WITHIN GROUP GRID
+-------------------------- */
+.grid.three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .grid.three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .grid.three {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
