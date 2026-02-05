@@ -401,6 +401,12 @@ input, textarea{
   margin-right: auto !important;
 }
 
+.sub-bullet {
+  margin-left: 18px;
+  font-style: italic;
+  opacity: 0.85;
+}
+
 
 
 
