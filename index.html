@@ -1,298 +1,533 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('wg-theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      var de = document.documentElement;
+      de.setAttribute('data-theme', t);
+      de.className += ' js';
+      setTimeout(function () { de.className += ' is-loaded'; }, 3000);
+    })();
+  </script>
 
-  <title>Within Group | Built from Within</title>
-  <meta name="description" content="Within Group represents a dedicated capital partner in reviewing and coordinating non-performing residential loan transactions, helping lenders facilitate liquidity through a structured process." />
+  <title>NPL Acquisitions for CRE &amp; Multifamily Loans | Within Group</title>
+  <meta name="description" content="Within Group sources all-cash, loan-level acquisitions of non-performing commercial real estate and multifamily loans ($3MM+ UPB) for a dedicated institutional capital partner, bilateral or in marketed sales.">
+  <link rel="canonical" href="https://within-group.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F0F3F8">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1128">
+  <meta name="color-scheme" content="light dark">
 
-  <!-- Inter font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Within Group">
+  <meta property="og:url" content="https://within-group.com/">
+  <meta property="og:title" content="Within Group | Liquidity for non-performing loans">
+  <meta property="og:description" content="All-cash, loan-level bids on non-performing CRE and multifamily loans of $3MM+ UPB. Bilateral or marketed. Exit the position. Redeploy the capital.">
+  <meta property="og:image" content="https://within-group.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Within Group: liquidity for non-performing loans">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Within Group | Liquidity for non-performing loans">
+  <meta name="twitter:description" content="All-cash, loan-level bids on non-performing CRE and multifamily loans of $3MM+ UPB.">
+  <meta name="twitter:image" content="https://within-group.com/assets/og-image.png">
 
-  <!-- Favicons (make sure these file paths match your repo) -->
-  <link rel="icon" href="assets/favicons/favicon-32.png" sizes="32x32" type="image/png" />
-  <link rel="icon" href="assets/favicons/favicon-16.png" sizes="16x16" type="image/png" />
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://within-group.com/#org",
+      "name": "Within Group LLC",
+      "alternateName": "Within Group",
+      "url": "https://within-group.com/",
+      "logo": "https://within-group.com/assets/logos/within-group-mark-512.png",
+      "image": "https://within-group.com/assets/og-image.png",
+      "email": "info@within-group.com",
+      "slogan": "Built from Within",
+      "description": "Within Group sources and coordinates acquisitions of non-performing commercial real estate and multifamily loans for a dedicated institutional capital partner. All-cash, loan-level bids on first-lien whole loans of $3MM+ UPB, bilateral or in marketed sale processes.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/within-group/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "loan sales",
+          "email": "info@within-group.com",
+          "areaServed": "US",
+          "availableLanguage": "English"
+        }
+      ],
+      "knowsAbout": [
+        "Non-performing loans",
+        "NPL acquisitions",
+        "Commercial real estate loan sales",
+        "Multifamily loan sales",
+        "Distressed debt",
+        "Note sales",
+        "Loan sale advisory processes",
+        "CMBS special servicing",
+        "Bridge loan defaults",
+        "Maturity defaults"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://within-group.com/#website",
+      "url": "https://within-group.com/",
+      "name": "Within Group",
+      "publisher": {
+        "@id": "https://within-group.com/#org"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://within-group.com/#service",
+      "name": "Non-performing CRE and multifamily loan acquisitions",
+      "serviceType": "Non-performing loan acquisition sourcing",
+      "provider": {
+        "@id": "https://within-group.com/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Regional and community banks, debt funds, mortgage REITs, CMBS and CLO special servicers, life insurance companies, and loan sale advisors"
+      },
+      "description": "All-cash, loan-level bids on first-lien whole loans with $3MM+ UPB per asset (target $5–7MM), secured by multifamily, mixed-use, office, industrial, self-storage, or 2–4 unit residential property with in-place cash flow, at or below 80% LTV on current as-is value. Monetary default, maturity default, or in foreclosure. Notes only, no REO. Single notes or pools, bilateral or marketed."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://within-group.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Within Group?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Within Group LLC is a New York–based real estate credit firm. We source and coordinate acquisitions of non-performing commercial real estate and multifamily loans on behalf of a dedicated institutional capital partner, working with regional and community banks, debt funds and mortgage REITs, CMBS and CLO special servicers, life companies, and their loan sale advisors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What loans fit the buy box?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First-lien whole loans with $3MM+ of UPB per asset (target $5–7MM, no cap), secured by multifamily, mixed-use, office, industrial, self-storage, or 2–4 unit residential property with in-place cash flow, at or below 80% LTV on current as-is value. Retail and hospitality are considered selectively."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which loan types and default statuses do you consider?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bridge and transitional, CRE term, mini-perm, CMBS conduit, life company, and DSCR loans, whether held on balance sheet or securitized. The loan should be in monetary default, maturity default, or foreclosure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you buy REO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Our capital partner acquires notes only. Also outside the box: single-family (1-unit) residential, owner-occupied and owner-user properties (including SBA loans), rent-regulated multifamily, in-process construction or renovation, and land or entitlement plays."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you take part in marketed loan sales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We trade bilaterally off-market under NDA, and we also bid in marketed, advisor-run sale processes. Add us to the bidder list for your next sale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you bid on single loans or pools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. Bids are made at the loan level, whether the notes come one at a time or as a pool, so each loan is priced on its own collateral."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which states do you buy in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nationwide, with an emphasis on lender-friendly jurisdictions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are bids priced, and how quickly can a trade close?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each loan is priced on its current as-is value from an independent valuation. Bids are all-cash with no financing contingency. Once bid and ask align and an LOI is signed, diligence is a 5–7 day data room review, followed by a loan sale agreement and closing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a loan tape include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Property address and type, UPB, note rate and default rate, maturity date, last paid date, accrued interest, occupancy or rent roll, the most recent valuation, and legal or foreclosure status. A single-asset summary is a fine place to start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Within Group a broker-dealer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Within Group sources and coordinates loan sale transactions on behalf of its capital partner and does not offer or solicit securities. All indications of interest are non-binding and subject to diligence, documentation, and capital partner approval."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <!-- Left: Within Group Horizontal Logo -->
-      <a class="brand" href="#top" aria-label="Within Group home">
-        <img
-          class="brand-logo"
-          src="assets/logos/within-group-horizontal.png"
-          alt="Within Group"
-        />
-      </a>
+  <a class="skip" href="#main">Skip to content</a>
 
-      <!-- Right: CTA -->
-      <a class="email-link" href="mailto:info@within-group.com?subject=Within%20Group%20Inquiry">
-        info@within-group.com <span class="arrow">↗</span>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Within Group, back to top">
+        <svg class="logo" role="img" aria-label="Within Group" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="104 380 1712 320"><defs><clipPath id="h-clip-0"><path clip-rule="nonzero" d="M 256 486 L 407 486 L 407 639 L 256 639 Z M 256 486 "/></clipPath><clipPath id="h-clip-1"><path clip-rule="nonzero" d="M 256.74 572.98 L 265.16 618.05 L 280.5 638.07 L 315.02 638.07 C 315.02 638.07 330.03 578.07 346.87 548.16 C 346.87 548.16 366.83 496.82 406.80 498.85 C 382.72 485.57 363.77 486.55 363.77 486.55 C 363.77 486.55 363.46 486.53 362.86 486.53 C 354.86 486.53 296.02 489.44 256.74 572.98 "/></clipPath><linearGradient id="h-linear-pattern-0" gradientUnits="userSpaceOnUse" x1="-0.68" y1="0" x2="1.85" y2="0" gradientTransform="matrix(-70.53, 39.77, -39.77, -70.53, 372.56, 537.63)"><stop offset="0" stop-color="#236db3"/><stop offset="0.28" stop-color="#236cb2"/><stop offset="0.30" stop-color="#2368ae"/><stop offset="0.32" stop-color="#2465aa"/><stop offset="0.35" stop-color="#2562a7"/><stop offset="0.37" stop-color="#255fa3"/><stop offset="0.39" stop-color="#265ca0"/><stop offset="0.42" stop-color="#26599d"/><stop offset="0.44" stop-color="#275699"/><stop offset="0.46" stop-color="#285396"/><stop offset="0.49" stop-color="#285193"/><stop offset="0.51" stop-color="#294e90"/><stop offset="0.53" stop-color="#2a4b8d"/><stop offset="0.56" stop-color="#2b488a"/><stop offset="0.58" stop-color="#2b4587"/><stop offset="0.60" stop-color="#2c4284"/><stop offset="0.63" stop-color="#2d4081"/><stop offset="0.65" stop-color="#2d3d7e"/><stop offset="1" stop-color="#2e3c7d"/></linearGradient><clipPath id="h-clip-2"><path clip-rule="nonzero" d="M 320 385 L 408 385 L 408 473 L 320 473 Z M 320 385 "/></clipPath><clipPath id="h-clip-3"><path clip-rule="nonzero" d="M 320.76 429.09 C 320.76 452.95 340.10 472.29 363.96 472.29 C 387.82 472.29 407.16 452.95 407.16 429.09 C 407.16 405.23 387.82 385.89 363.96 385.89 C 340.10 385.89 320.76 405.23 320.76 429.09 "/></clipPath><linearGradient id="h-linear-pattern-1" gradientUnits="userSpaceOnUse" x1="-0.21" y1="0" x2="0.83" y2="0" gradientTransform="matrix(-98.51, 52.79, -52.79, -98.51, 394.72, 412.60)"><stop offset="0" stop-color="#236db3"/><stop offset="0.22" stop-color="#236cb2"/><stop offset="0.27" stop-color="#2369af"/><stop offset="0.32" stop-color="#2467ac"/><stop offset="0.36" stop-color="#2464a9"/><stop offset="0.41" stop-color="#2562a6"/><stop offset="0.46" stop-color="#255fa4"/><stop offset="0.50" stop-color="#265da1"/><stop offset="0.55" stop-color="#265a9e"/><stop offset="0.60" stop-color="#27589b"/><stop offset="0.64" stop-color="#275699"/><stop offset="0.69" stop-color="#285396"/><stop offset="0.74" stop-color="#285193"/><stop offset="0.78" stop-color="#294e91"/><stop offset="0.83" stop-color="#2a4c8e"/><stop offset="0.88" stop-color="#2a4a8b"/><stop offset="0.92" stop-color="#2b4789"/><stop offset="0.97" stop-color="#2b4586"/><stop offset="1" stop-color="#2c4485"/></linearGradient><clipPath id="h-clip-4"><path clip-rule="nonzero" d="M 110 402 L 316 402 L 316 695 L 110 695 Z M 110 402 "/></clipPath><clipPath id="h-clip-5"><path clip-rule="nonzero" d="M 110.46 402.23 C 132.02 562.77 186.17 643.53 186.17 643.53 C 217.46 696.57 252.46 694.08 252.46 694.08 C 294.71 694.08 315.02 638.07 315.02 638.07 C 278.42 623.75 242.15 523.38 235.08 501.46 C 228.01 479.53 219.52 466.18 219.52 466.18 C 180.58 404.28 119.33 402.22 111.33 402.22 C 110.76 402.22 110.46 402.23 110.46 402.23 "/></clipPath><linearGradient id="h-linear-pattern-2" gradientUnits="userSpaceOnUse" x1="-0.66" y1="0" x2="1.60" y2="0" gradientTransform="matrix(-121.98, 46.67, -46.67, -121.98, 266.44, 517.30)"><stop offset="0" stop-color="#236db3"/><stop offset="0.30" stop-color="#236cb2"/><stop offset="0.32" stop-color="#2369af"/><stop offset="0.34" stop-color="#2467ac"/><stop offset="0.37" stop-color="#2464a9"/><stop offset="0.39" stop-color="#2561a6"/><stop offset="0.41" stop-color="#255ea2"/><stop offset="0.44" stop-color="#265c9f"/><stop offset="0.46" stop-color="#27599c"/><stop offset="0.48" stop-color="#27569a"/><stop offset="0.51" stop-color="#285497"/><stop offset="0.53" stop-color="#285194"/><stop offset="0.55" stop-color="#294f91"/><stop offset="0.58" stop-color="#2a4c8e"/><stop offset="0.60" stop-color="#2a4a8b"/><stop offset="0.62" stop-color="#2b4789"/><stop offset="0.65" stop-color="#2b4486"/><stop offset="0.67" stop-color="#2c4283"/><stop offset="0.69" stop-color="#2d3f81"/><stop offset="0.72" stop-color="#2d3d7e"/><stop offset="1" stop-color="#2e3c7d"/></linearGradient><clipPath id="h-clip-6"><path clip-rule="nonzero" d="M 412 402 L 618 402 L 618 695 L 412 695 Z M 412 402 "/></clipPath><clipPath id="h-clip-7"><path clip-rule="nonzero" d="M 508.03 466.18 C 508.03 466.18 499.54 479.53 492.47 501.46 C 485.40 523.38 449.12 623.75 412.53 638.07 C 412.53 638.07 432.84 694.08 475.08 694.08 C 475.08 694.08 510.09 696.57 541.38 643.53 C 541.38 643.53 595.52 562.77 617.08 402.23 C 617.08 402.23 616.78 402.22 616.21 402.22 C 608.21 402.22 546.96 404.28 508.03 466.18 "/></clipPath><linearGradient id="h-linear-pattern-3" gradientUnits="userSpaceOnUse" x1="-0.82" y1="0" x2="1.34" y2="0" gradientTransform="matrix(-122.33, 33.23, -33.23, -122.33, 548.26, 546.40)"><stop offset="0" stop-color="#25afd9"/><stop offset="0.39" stop-color="#25aed9"/><stop offset="0.41" stop-color="#25aad7"/><stop offset="0.44" stop-color="#25a6d5"/><stop offset="0.46" stop-color="#24a3d3"/><stop offset="0.48" stop-color="#249fd1"/><stop offset="0.51" stop-color="#249ccf"/><stop offset="0.53" stop-color="#2498cd"/><stop offset="0.55" stop-color="#2495cb"/><stop offset="0.58" stop-color="#2391c9"/><stop offset="0.60" stop-color="#238ec7"/><stop offset="0.62" stop-color="#238bc5"/><stop offset="0.65" stop-color="#2387c3"/><stop offset="0.67" stop-color="#2384c1"/><stop offset="0.69" stop-color="#2381bf"/><stop offset="0.72" stop-color="#237dbd"/><stop offset="0.74" stop-color="#237abb"/><stop offset="0.76" stop-color="#2377b9"/><stop offset="0.79" stop-color="#2374b7"/><stop offset="0.81" stop-color="#2370b5"/><stop offset="0.83" stop-color="#236db4"/><stop offset="1" stop-color="#236db3"/></linearGradient></defs><g clip-path="url(#h-clip-0)"><g clip-path="url(#h-clip-1)"><path fill-rule="nonzero" fill="url(#h-linear-pattern-0)" d="M 472.04 601.27 L 370.59 421.36 L 191.49 522.36 L 292.94 702.27 Z M 472.04 601.27 "/></g></g><g clip-path="url(#h-clip-2)"><g clip-path="url(#h-clip-3)"><path fill-rule="nonzero" fill="url(#h-linear-pattern-1)" d="M 443.14 453.01 L 387.89 349.92 L 284.79 405.17 L 340.04 508.26 Z M 443.14 453.01 "/></g></g><g clip-path="url(#h-clip-4)"><g clip-path="url(#h-clip-5)"><path fill-rule="nonzero" fill="url(#h-linear-pattern-2)" d="M 413.26 658.98 L 288.90 333.95 L 12.23 439.81 L 136.58 764.83 Z M 413.26 658.98 "/></g></g><path fill-rule="nonzero" fill="#25afd9" d="M 406.80 498.85 C 366.83 496.82 346.87 548.16 346.87 548.16 C 352.46 538.24 358.26 531.62 363.77 531.62 C 385.89 531.62 412.53 638.07 412.53 638.07 L 458.64 638.07 L 470.81 572.98 C 451.41 531.73 427.25 510.14 406.80 498.85 "/><g clip-path="url(#h-clip-6)"><g clip-path="url(#h-clip-7)"><path fill-rule="nonzero" fill="url(#h-linear-pattern-3)" d="M 691.55 676.33 L 603.02 350.47 L 338.06 422.45 L 426.58 748.32 Z M 691.55 676.33 "/></g></g><path fill-rule="nonzero" class="wm-a" d="M 731.5 589.53 L 701.94 486.26 L 725.80 486.26 L 742.89 558.02 L 743.75 558.02 L 762.61 486.26 L 783.03 486.26 L 801.84 558.17 L 802.75 558.17 L 819.84 486.26 L 843.69 486.26 L 814.14 589.53 L 792.86 589.53 L 773.20 522.01 L 772.39 522.01 L 752.77 589.53 Z M 731.5 589.53 "/><path fill-rule="nonzero" class="wm-a" d="M 884.27 589.53 L 862.44 589.53 L 862.44 486.26 L 884.27 486.26 Z M 884.27 589.53 "/><path fill-rule="nonzero" class="wm-a" d="M 905.44 504.26 L 905.44 486.26 L 990.26 486.26 L 990.26 504.26 L 958.64 504.26 L 958.64 589.53 L 937.06 589.53 L 937.06 504.26 Z M 905.44 504.26 "/><path fill-rule="nonzero" class="wm-a" d="M 1011.38 589.53 L 1011.38 486.26 L 1033.21 486.26 L 1033.21 528.87 L 1077.53 528.87 L 1077.53 486.26 L 1099.32 486.26 L 1099.32 589.53 L 1077.53 589.53 L 1077.53 546.87 L 1033.21 546.87 L 1033.21 589.53 Z M 1011.38 589.53 "/><path fill-rule="nonzero" class="wm-a" d="M 1146.26 589.53 L 1124.42 589.53 L 1124.42 486.26 L 1146.26 486.26 Z M 1146.26 589.53 "/><path fill-rule="nonzero" class="wm-a" d="M 1257.74 486.26 L 1257.74 589.53 L 1238.88 589.53 L 1193.95 524.53 L 1193.19 524.53 L 1193.19 589.53 L 1171.36 589.53 L 1171.36 486.26 L 1190.52 486.26 L 1235.10 551.21 L 1236.00 551.21 L 1236.00 486.26 Z M 1257.74 486.26 "/><path fill-rule="nonzero" class="wm-b" d="M 1395.13 518.89 C 1394.15 515.83 1392.85 513.08 1391.22 510.64 C 1389.59 508.21 1387.65 506.12 1385.40 504.39 C 1383.14 502.66 1380.58 501.34 1377.71 500.43 C 1374.83 499.52 1371.68 499.07 1368.25 499.07 C 1362.43 499.07 1357.19 500.57 1352.52 503.56 C 1347.84 506.55 1344.16 510.93 1341.45 516.69 C 1338.74 522.46 1337.39 529.51 1337.39 537.85 C 1337.39 546.22 1338.75 553.30 1341.48 559.08 C 1344.20 564.86 1347.93 569.25 1352.67 572.24 C 1357.41 575.23 1362.80 576.73 1368.85 576.73 C 1374.47 576.73 1379.37 575.58 1383.55 573.30 C 1387.74 571.01 1390.98 567.78 1393.29 563.59 C 1395.59 559.41 1396.74 554.47 1396.74 548.79 L 1400.78 549.55 L 1371.23 549.55 L 1371.23 536.69 L 1411.82 536.69 L 1411.82 548.44 C 1411.82 557.11 1409.98 564.63 1406.30 571.00 C 1402.62 577.37 1397.54 582.29 1391.07 585.75 C 1384.60 589.21 1377.19 590.95 1368.85 590.95 C 1359.51 590.95 1351.32 588.80 1344.27 584.49 C 1337.23 580.19 1331.74 574.08 1327.81 566.16 C 1323.87 558.25 1321.91 548.84 1321.91 537.95 C 1321.91 529.71 1323.05 522.32 1325.34 515.76 C 1327.62 509.21 1330.84 503.63 1335 499.05 C 1339.15 494.46 1344.04 490.94 1349.67 488.51 C 1355.30 486.07 1361.46 484.85 1368.15 484.85 C 1373.73 484.85 1378.93 485.67 1383.76 487.32 C 1388.58 488.97 1392.89 491.30 1396.66 494.33 C 1400.45 497.35 1403.58 500.94 1406.07 505.10 C 1408.56 509.25 1410.24 513.84 1411.11 518.89 Z M 1395.13 518.89 "/><path fill-rule="nonzero" class="wm-b" d="M 1482.57 542.94 L 1508.08 589.53 L 1490.33 589.53 L 1465.32 542.94 Z M 1431.58 589.53 L 1431.58 486.26 L 1468.40 486.26 C 1476.40 486.26 1483.05 487.64 1488.34 490.40 C 1493.64 493.16 1497.59 496.96 1500.21 501.82 C 1502.83 506.67 1504.15 512.28 1504.15 518.64 C 1504.15 524.96 1502.83 530.51 1500.19 535.30 C 1497.55 540.09 1493.58 543.82 1488.29 546.47 C 1483 549.13 1476.35 550.46 1468.35 550.46 L 1440.46 550.46 L 1440.46 537.04 L 1466.93 537.04 C 1471.98 537.04 1476.08 536.32 1479.26 534.87 C 1482.44 533.42 1484.77 531.33 1486.25 528.57 C 1487.73 525.81 1488.46 522.50 1488.46 518.64 C 1488.46 514.74 1487.72 511.36 1486.22 508.50 C 1484.73 505.64 1482.39 503.45 1479.21 501.92 C 1476.03 500.39 1471.87 499.62 1466.73 499.62 L 1447.17 499.62 L 1447.17 589.53 Z M 1431.58 589.53 "/><path fill-rule="nonzero" class="wm-b" d="M 1597.44 537.90 C 1597.44 529.5 1596.08 522.41 1593.38 516.64 C 1590.67 510.88 1586.97 506.51 1582.28 503.53 C 1577.59 500.56 1572.29 499.07 1566.37 499.07 C 1560.42 499.07 1555.11 500.56 1550.44 503.53 C 1545.76 506.51 1542.08 510.88 1539.37 516.64 C 1536.66 522.41 1535.31 529.5 1535.31 537.90 C 1535.31 546.30 1536.66 553.39 1539.37 559.15 C 1542.08 564.92 1545.76 569.29 1550.44 572.26 C 1555.11 575.24 1560.42 576.73 1566.37 576.73 C 1572.29 576.73 1577.59 575.24 1582.28 572.26 C 1586.97 569.29 1590.67 564.92 1593.38 559.15 C 1596.08 553.39 1597.44 546.30 1597.44 537.90 M 1612.87 537.90 C 1612.87 548.92 1610.85 558.40 1606.82 566.31 C 1602.78 574.23 1597.26 580.32 1590.25 584.57 C 1583.24 588.82 1575.28 590.95 1566.37 590.95 C 1557.43 590.95 1549.46 588.82 1542.45 584.57 C 1535.44 580.32 1529.92 574.22 1525.88 566.29 C 1521.85 558.35 1519.83 548.89 1519.83 537.90 C 1519.83 526.87 1521.85 517.40 1525.88 509.48 C 1529.92 501.57 1535.44 495.48 1542.45 491.23 C 1549.46 486.98 1557.43 484.85 1566.37 484.85 C 1575.28 484.85 1583.24 486.98 1590.25 491.23 C 1597.26 495.48 1602.78 501.57 1606.82 509.48 C 1610.85 517.40 1612.87 526.87 1612.87 537.90 "/><path fill-rule="nonzero" class="wm-b" d="M 1698.64 486.26 L 1714.27 486.26 L 1714.27 554.19 C 1714.27 561.41 1712.57 567.81 1709.18 573.37 C 1705.78 578.94 1701.01 583.31 1694.86 586.48 C 1688.71 589.66 1681.5 591.25 1673.23 591.25 C 1664.99 591.25 1657.79 589.66 1651.64 586.48 C 1645.49 583.31 1640.71 578.94 1637.32 573.37 C 1633.92 567.81 1632.23 561.41 1632.23 554.19 L 1632.23 486.26 L 1647.81 486.26 L 1647.81 552.92 C 1647.81 557.60 1648.84 561.75 1650.91 565.38 C 1652.98 569.01 1655.91 571.86 1659.71 573.93 C 1663.51 576 1668.01 577.03 1673.23 577.03 C 1678.47 577.03 1683.00 576 1686.82 573.93 C 1690.63 571.86 1693.55 569.01 1695.59 565.38 C 1697.62 561.75 1698.64 557.60 1698.64 552.92 Z M 1698.64 486.26 "/><path fill-rule="nonzero" class="wm-b" d="M 1736.96 589.53 L 1736.96 486.26 L 1773.77 486.26 C 1781.81 486.26 1788.46 487.72 1793.74 490.65 C 1799.02 493.57 1802.97 497.57 1805.59 502.62 C 1808.21 507.68 1809.53 513.37 1809.53 519.69 C 1809.53 526.05 1808.21 531.76 1805.57 536.81 C 1802.93 541.87 1798.96 545.87 1793.67 548.82 C 1788.37 551.76 1781.73 553.23 1773.72 553.23 L 1748.41 553.23 L 1748.41 540.01 L 1772.31 540.01 C 1777.39 540.01 1781.51 539.13 1784.66 537.37 C 1787.82 535.60 1790.14 533.19 1791.62 530.13 C 1793.10 527.07 1793.84 523.59 1793.84 519.69 C 1793.84 515.80 1793.10 512.33 1791.62 509.31 C 1790.14 506.28 1787.82 503.91 1784.64 502.19 C 1781.46 500.48 1777.28 499.62 1772.11 499.62 L 1752.54 499.62 L 1752.54 589.53 Z M 1736.96 589.53 "/></svg>
       </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#buy-box">Buy box</a>
+        <a href="#sellers">Who we work with</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/></svg>
+        </button>
+        <a class="btn btn-small" href="mailto:info@within-group.com?subject=Non-performing%20loan%20for%20discussion&amp;body=Institution%3A%0AAsset%20type%20and%20location%3A%0AApproximate%20UPB%3A%0ADefault%20status%3A%0A%0ANo%20tape%20yet%3F%20A%20short%20description%20is%20enough%20to%20start.%20If%20you%20need%20an%20NDA%20before%20sharing%20loan-level%20detail%2C%20let%20us%20know.">Discuss a loan</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- Page header (requested) -->
-    <h1 class="sr-only">Within Group | Built from Within</h1>
-
-<!-- Hero Section -->
-<section id="top" class="section hero reveal">
-  <div class="container">
-    <div class="hero-wrap">
-      <div class="hero-text">
-        <h2 class="hero-title">Creating Clarity for Non-Performing Assets</h2>
-        <p class="hero-subtitle">
-          Coordinating liquidity solutions for non-performing residential real estate loans.
-        </p>
-      </div>
-
-      <div class="hero-cta-row">
-        <a class="btn" href="mailto:info@within-group.com?subject=Within%20Group%20Inquiry">
-          Contact Us
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Section 1: What’s Within -->
-    <section class="section section-alt">
-      <div class="container">
-        <h2 class="section-title center">What’s Within</h2>
-          <p class="section-body center">
-          Within Group represents a dedicated capital partner in reviewing and coordinating non-performing loan transactions.
-          We work with lenders seeking liquidity and a disciplined, structured process.
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker load" style="--d:0">Now acquiring CRE and multifamily NPLs</p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="line"><span class="load" style="--d:1">Liquidity for</span></span>
+            <span class="line"><span class="load" style="--d:2">non&#8209;performing loans.</span></span>
+          </h1>
+          <p class="hero-deck">
+            <span class="line"><span class="load" style="--d:3">Exit the position. Redeploy the capital.</span></span>
           </p>
-
-        <div class="grid two">
-          <div class="card">
-            <h3 class="card-title">For Lenders</h3>
-            <ul class="list">
-              <li>Supporting lenders seeking <strong>efficient disposition of non-performing assets</strong></li>
-              <li>Reviewing tapes of <strong>1st-lien, business-purpose NPLs secured by NOO residential properties</strong></li>
-              <li>Facilitating liquidity through <strong>a dedicated capital partner</strong></li>
-              <li>Managing the transaction through a structured process from <strong>first discussion to close</strong></li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3 class="card-title">Our Approach</h3>
-            <ul class="list">
-              <li>Clear communication and organized intake from the start</li>
-              <li>Disciplined screening to reduce friction and wasted time</li>
-              <li>Professional coordination across participants and materials</li>
-              <li>Reliable process support from initial discussion through completion</li>
-            </ul>
+          <p class="hero-lead load" style="--d:5">
+            Within Group sources and coordinates note acquisitions for a dedicated institutional capital partner.
+            Loans are priced one by one on current as-is value. Once the trade settles, the asset comes off your books,
+            and the workout, enforcement, and exit belong to our partner.
+          </p>
+          <div class="hero-ctas load" style="--d:6">
+            <a class="btn" href="mailto:info@within-group.com?subject=Non-performing%20loan%20for%20discussion&amp;body=Institution%3A%0AAsset%20type%20and%20location%3A%0AApproximate%20UPB%3A%0ADefault%20status%3A%0A%0ANo%20tape%20yet%3F%20A%20short%20description%20is%20enough%20to%20start.%20If%20you%20need%20an%20NDA%20before%20sharing%20loan-level%20detail%2C%20let%20us%20know.">Discuss a loan</a>
+            <a class="btn btn-ghost" href="#buy-box">See the buy box</a>
           </div>
         </div>
+        <div class="hero-field">
+          <div class="screen-status">
+            <div class="screen-steps" role="group" aria-label="Replay the buy-box screen">
+              <button type="button" data-stage="1" aria-label="Replay from the first-lien whole loan screen"><i></i></button>
+              <button type="button" data-stage="2" aria-label="Replay from the $3MM+ UPB screen"><i></i></button>
+              <button type="button" data-stage="3" aria-label="Replay from the in-place cash flow screen"><i></i></button>
+              <button type="button" data-stage="4" aria-label="Replay from the 80% LTV screen"><i></i></button>
+            </div>
+            <p class="screen-label" aria-hidden="true">Reading the tape</p>
+          </div>
+        </div>
+      </div>
 
-        <p class="section-body subtle center">
-          Every engagement is approached with careful planning, clear communication, and disciplined execution —
-          so both parties feel aligned and confident in the process.
-        </p>
-
+      <div class="wrap">
+        <dl class="terms">
+          <div class="term"><dt>UPB per asset, no cap</dt><dd>$3MM+</dd></div>
+          <div class="term"><dt>Target UPB</dt><dd>$5–7MM</dd></div>
+          <div class="term"><dt>LTV on current as-is value</dt><dd>≤ 80%</dd></div>
+          <div class="term"><dt>No financing contingency</dt><dd>All-cash</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- Section 2: What We Review (Buy Box) -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title center">What We Review</h2>
-
-        <p class="section-body center">
-          To keep conversations efficient, we prioritize tapes that match the following profile:
-        </p>
-
-        <div class="grid buybox">
-          <div class="card">
-            <h3 class="card-title">Asset Profile</h3>
-            <ul class="list">
-              <li><strong>1st-Lien</strong> positions</li>
-              <li><strong>Origination Types:</strong> Bridge / RTL</li>
-              <li><strong>Collateral:</strong> NOO SFR & small balance MF</li>
-              <li><strong>Leverage:</strong> ≤ 75% LTV</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3 class="card-title">Loan Status</h3>
-            <ul class="list">
-              <li><strong>NPL</strong> / non-performing positions</li>
-              <li><strong>$500k+</strong> typical loan size</li>
-              <li>Portfolios or single assets</li>
-              <li>Nationwide consideration</li>
-              <li>Clear data points = faster review</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3 class="card-title">Helpful Tape Fields</h3>
-            <ul class="list">
-              <li>Property address / collateral type</li>
-              <li>UPB, note rate, maturity</li>
-              <li>Payment history / delinquency status</li>
-              <li>Occupancy, valuation / BPO, legal status</li>
-            </ul>
-          </div>
+    <!-- Buy box -->
+    <section class="section" id="buy-box" aria-labelledby="bb-title">
+      <div class="wrap split">
+        <div class="split-head">
+          <h2 id="bb-title" class="h2">The buy box</h2>
+          <p class="intro">What our capital partner is acquiring now. If a loan sits close to the box, send it anyway. You’ll get a straight answer on fit.</p>
         </div>
-
-        <p class="section-body subtle center">
-          If you’re unsure whether a tape fits, send us a message and we can quickly confirm alignment.
-        </p>
-      </div>
-    </section>
-
-    <!-- Section 3: How the Process Works -->
-    <section class="section section-alt">
-      <div class="container">
-        <h2 class="section-title center">How the Process Works</h2>
-
-        <div class="steps">
-          <div class="step card">
-            <div class="step-num">1</div>
-            <h3 class="card-title">Initial Discussion</h3>
-            <p class="section-body">
-              A quick conversation to understand your goals, timing, and the general profile of the paper.
-            </p>
+        <div class="split-body">
+          <div class="box" data-observe>
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <dl class="spec">
+              <div class="spec-row"><dt>Position</dt><dd>First-lien whole loans<span class="sub">No participations, A/B splits, or mezzanine debt</span></dd></div>
+              <div class="spec-row"><dt>UPB</dt><dd>$3MM+ per asset, no cap<span class="sub">Target range <span class="nw">$5–7MM</span>. Each property carries its own loan.</span></dd></div>
+              <div class="spec-row"><dt>Asset type</dt><dd>Multifamily, mixed-use, office, industrial, self-storage, and <span class="nw">2–4 unit</span> residential, with in-place cash flow<span class="sub">Retail and hospitality considered selectively</span></dd></div>
+              <div class="spec-row"><dt>Status</dt><dd>Monetary default, maturity default, or in foreclosure<span class="sub">Notes only, no REO</span></dd></div>
+              <div class="spec-row"><dt>Loan type</dt><dd>Bridge and transitional, CRE term, mini-perm, CMBS conduit, life company, DSCR<span class="sub">Balance-sheet or securitized</span></dd></div>
+              <div class="spec-row"><dt>Leverage</dt><dd>≤ 80% LTV<span class="sub">UPB to current as-is value</span></dd></div>
+              <div class="spec-row"><dt>Geography</dt><dd>Nationwide, with an emphasis on lender-friendly jurisdictions</dd></div>
+              <div class="spec-row"><dt>Execution</dt><dd>Loan-level bids on single notes or pools<span class="sub">Bilateral off-market trades or marketed sale processes</span></dd></div>
+            </dl>
           </div>
-
-          <div class="step card">
-            <div class="step-num">2</div>
-            <h3 class="card-title">Tape Review</h3>
-            <p class="section-body">
-              We review the tape against the buy box and follow up with targeted questions as needed.
-            </p>
-          </div>
-
-          <div class="step card">
-            <div class="step-num">3</div>
-            <h3 class="card-title">Alignment</h3>
-            <p class="section-body">
-              If the tape aligns, we coordinate next steps with the dedicated capital partner and keep communication organized.
-            </p>
-          </div>
-
-          <div class="step card">
-            <div class="step-num">4</div>
-            <h3 class="card-title">Process Support</h3>
-            <p class="section-body">
-              We support the transaction process through documentation, coordination, and clear touchpoints through close.
-            </p>
+          <div class="outside">
+            <h3>Outside the box</h3>
+            <p>REO, single-family (1-unit) residential, owner-occupied and owner-user properties (including SBA), rent-regulated multifamily, in-process construction or renovation, and land or entitlement plays.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 4: Why Within Group -->    
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title center">Why Within Group</h2>
-
-        <div class="grid three">
-          <div class="card">
-            <h3 class="card-title">Disciplined Process</h3>
-            <p class="section-body">
-              We keep review and communication structured to reduce noise and shorten feedback loops.
-            </p>
+    <!-- Why -->
+    <section class="section section-tint" aria-labelledby="why-title">
+      <div class="wrap split">
+        <div class="split-head">
+          <h2 id="why-title" class="h2">Why lenders work with us</h2>
+        </div>
+        <div class="split-body why">
+          <div class="why-item">
+            <h3>Certainty of execution</h3>
+            <p>All-cash, no financing contingency, and dedicated capital behind every bid.</p>
           </div>
-
-          <div class="card">
-            <h3 class="card-title">Clear Communication</h3>
-            <p class="section-body">
-              Expect concise questions, organized follow-ups, and consistent touchpoints throughout the process.
-            </p>
+          <div class="why-item">
+            <h3>Recovery now, not after foreclosure</h3>
+            <p>Trade the note now instead of carrying foreclosure timelines, legal spend, and REO risk.</p>
           </div>
-
-          <div class="card">
-            <h3 class="card-title">Reliable Coordination</h3>
-            <p class="section-body">
-              We coordinate materials and next steps so both sides can move efficiently and professionally.
-            </p>
+          <div class="why-item">
+            <h3>Bilateral or marketed</h3>
+            <p>Trade off-market with one buyer under NDA, or add us to the bidder list for your next marketed sale.</p>
+          </div>
+          <div class="why-item">
+            <h3>Loan-level pricing</h3>
+            <p>Every note is underwritten on its own collateral, so stabilized assets get bids that reflect it.</p>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Section 5: Start a Conversation (mailto CTA instead of form) -->
-<!-- Section 2: Start a Conversation -->
-<section id="contact" class="section section-alt">
-  <div class="container">
-    <div class="contact-wrap">
-      <h2 class="section-title center">Start a Conversation</h2>
-      <a class="btn contact-btn" href="mailto:info@within-group.com?subject=Within%20Group%20Inquiry">
-        Contact Us
-      </a>
-    </div>
-  </div>
-</section>
 
+    <!-- Sellers -->
+    <section class="section" id="sellers" aria-labelledby="sellers-title">
+      <div class="wrap">
+        <div class="sellers-head">
+          <h2 id="sellers-title" class="h2">Who we work with</h2>
+          <p class="intro">Built for the teams that decide when a loan is sold.</p>
+        </div>
+        <div class="sellers">
+          <div class="seller-tabs" role="tablist" aria-label="Seller types">
+            <button role="tab" id="tab-banks" aria-controls="panel-banks" aria-selected="true">Regional and community banks</button>
+            <button role="tab" id="tab-funds" aria-controls="panel-funds" aria-selected="false" tabindex="-1">Debt funds and mortgage REITs</button>
+            <button role="tab" id="tab-servicers" aria-controls="panel-servicers" aria-selected="false" tabindex="-1">CMBS and CLO special servicers</button>
+            <button role="tab" id="tab-life" aria-controls="panel-life" aria-selected="false" tabindex="-1">Life companies</button>
+            <button role="tab" id="tab-advisors" aria-controls="panel-advisors" aria-selected="false" tabindex="-1">Loan sale advisors</button>
+          </div>
+          <div class="seller-panels">
+            <div class="seller-panel" role="tabpanel" id="panel-banks" aria-labelledby="tab-banks" tabindex="0">
+              <h3>Move defaulted CRE off the balance sheet.</h3>
+              <p>For credit and special assets teams holding a non-performing commercial or multifamily loan. Trade the note quietly and recover now, rather than after legal spend and REO risk.</p>
+              <ul>
+                <li>Bilateral, off-market trades under NDA</li>
+                <li>Single notes or a pool, priced loan by loan</li>
+                <li>All-cash settlement with no financing contingency</li>
+              </ul>
+            </div>
+            <div class="seller-panel" role="tabpanel" id="panel-funds" aria-labelledby="tab-funds" tabindex="0" hidden>
+              <h3>Recycle capital tied up in defaulted bridge loans.</h3>
+              <p>Bridge, transitional, and term loans that missed a payment or a maturity. Balance-sheet or securitized, including CRE CLO collateral.</p>
+              <ul>
+                <li>Monetary default, maturity default, or in foreclosure</li>
+                <li>Priced on current as-is value, one note at a time</li>
+                <li>Single notes or pools</li>
+              </ul>
+            </div>
+            <div class="seller-panel" role="tabpanel" id="panel-servicers" aria-labelledby="tab-servicers" tabindex="0" hidden>
+              <h3>A cash bidder for your next note sale.</h3>
+              <p>When a note sale is the right resolution, add us to the bidder list. Bids are loan-level and all-cash, with a defined diligence window.</p>
+              <ul>
+                <li>Participates in marketed, competitive processes</li>
+                <li>First-lien whole loans, not A/B splits or participations</li>
+                <li>5–7 day data room review after LOI</li>
+              </ul>
+            </div>
+            <div class="seller-panel" role="tabpanel" id="panel-life" aria-labelledby="tab-life" tabindex="0" hidden>
+              <h3>A discreet exit for the rare default.</h3>
+              <p>For a non-performing mortgage that no longer fits the portfolio. One counterparty, a confidential process, and a clear read on value.</p>
+              <ul>
+                <li>Off-market, bilateral trades under NDA</li>
+                <li>Underwritten on the asset’s own collateral and cash flow</li>
+                <li>All-cash, no financing contingency</li>
+              </ul>
+            </div>
+            <div class="seller-panel" role="tabpanel" id="panel-advisors" aria-labelledby="tab-advisors" tabindex="0" hidden>
+              <h3>Put us on the list.</h3>
+              <p>We work inside your process: NDA, data room, bid date. Every note is underwritten on its own collateral, so stabilized assets get bids that reflect it.</p>
+              <ul>
+                <li>Loan-level bids on single notes or pools</li>
+                <li>A straight read on fit before anyone spends time on diligence</li>
+                <li>Dedicated institutional capital behind every bid</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section section-tint" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="process-head">
+          <h2 id="process-title" class="h2">How it works</h2>
+          <p class="intro">From tape to settlement in four steps.</p>
+        </div>
+        <ol class="process" data-observe>
+          <li class="step">
+            <span class="step-node" aria-hidden="true"></span>
+            <span class="step-num">1</span>
+            <h3>Send the tape</h3>
+            <p>A loan tape or single-asset summary, under NDA.</p>
+          </li>
+          <li class="step">
+            <span class="step-node" aria-hidden="true"></span>
+            <span class="step-num">2</span>
+            <h3>Screen and value</h3>
+            <p>A buy-box screen and an independent as-is valuation.</p>
+          </li>
+          <li class="step">
+            <span class="step-node" aria-hidden="true"></span>
+            <span class="step-num">3</span>
+            <h3>Bid and LOI</h3>
+            <p>A loan-level indicative bid, then an LOI once bid and ask align.</p>
+          </li>
+          <li class="step">
+            <span class="step-node" aria-hidden="true"></span>
+            <span class="step-num">4</span>
+            <h3>Diligence and close</h3>
+            <p>A 5–7 day data room review, loan sale agreement, and closing.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap split">
+        <div class="split-head">
+          <h2 id="faq-title" class="h2">Questions sellers ask</h2>
+          <p class="intro">Don’t see yours? <a href="mailto:info@within-group.com">Email us</a>.</p>
+        </div>
+        <div class="split-body faq">
+          <details class="qa">
+            <summary><h3>Who is Within Group?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>Within Group LLC is a New York–based real estate credit firm. We source and coordinate acquisitions of non-performing commercial real estate and multifamily loans on behalf of a dedicated institutional capital partner, working with regional and community banks, debt funds and mortgage REITs, CMBS and CLO special servicers, life companies, and their loan sale advisors.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>What loans fit the buy box?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>First-lien whole loans with $3MM+ of UPB per asset (target $5–7MM, no cap), secured by multifamily, mixed-use, office, industrial, self-storage, or 2–4 unit residential property with in-place cash flow, at or below 80% LTV on current as-is value. Retail and hospitality are considered selectively.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>Which loan types and default statuses do you consider?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>Bridge and transitional, CRE term, mini-perm, CMBS conduit, life company, and DSCR loans, whether held on balance sheet or securitized. The loan should be in monetary default, maturity default, or foreclosure.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>Do you buy REO?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>No. Our capital partner acquires notes only. Also outside the box: single-family (1-unit) residential, owner-occupied and owner-user properties (including SBA loans), rent-regulated multifamily, in-process construction or renovation, and land or entitlement plays.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>Do you take part in marketed loan sales?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>Yes. We trade bilaterally off-market under NDA, and we also bid in marketed, advisor-run sale processes. Add us to the bidder list for your next sale.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>Do you bid on single loans or pools?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>Both. Bids are made at the loan level, whether the notes come one at a time or as a pool, so each loan is priced on its own collateral.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>Which states do you buy in?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>Nationwide, with an emphasis on lender-friendly jurisdictions.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>How are bids priced, and how quickly can a trade close?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>Each loan is priced on its current as-is value from an independent valuation. Bids are all-cash with no financing contingency. Once bid and ask align and an LOI is signed, diligence is a 5–7 day data room review, followed by a loan sale agreement and closing.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>What should a loan tape include?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>Property address and type, UPB, note rate and default rate, maturity date, last paid date, accrued interest, occupancy or rent roll, the most recent valuation, and legal or foreclosure status. A single-asset summary is a fine place to start.</p></div>
+          </details>
+          <details class="qa">
+            <summary><h3>Is Within Group a broker-dealer?</h3><span class="qa-icon" aria-hidden="true"></span></summary>
+            <div class="qa-body"><p>No. Within Group sources and coordinates loan sale transactions on behalf of its capital partner and does not offer or solicit securities. All indications of interest are non-binding and subject to diligence, documentation, and capital partner approval.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 id="contact-title" class="contact-title">Have a non&#8209;performing loan to move?</h2>
+          <p class="contact-lead">Start with a short description or a full tape. You’ll get a straight read on fit, and a loan-level bid where it makes sense.</p>
+          <a class="contact-email" href="mailto:info@within-group.com?subject=Non-performing%20loan%20for%20discussion&amp;body=Institution%3A%0AAsset%20type%20and%20location%3A%0AApproximate%20UPB%3A%0ADefault%20status%3A%0A%0ANo%20tape%20yet%3F%20A%20short%20description%20is%20enough%20to%20start.%20If%20you%20need%20an%20NDA%20before%20sharing%20loan-level%20detail%2C%20let%20us%20know.">info@within-group.com</a>
+          <p class="contact-note">Happy to sign an NDA before you share loan-level detail.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <div class="footer-brand">Within Group LLC</div>
-        <div class="footer-links">
-          <a href="mailto:info@within-group.com">info@within-group.com</a>
-        </div>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <svg class="logo logo-footer" role="img" aria-label="Within Group" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="104 380 1712 320"><defs><clipPath id="f-clip-0"><path clip-rule="nonzero" d="M 256 486 L 407 486 L 407 639 L 256 639 Z M 256 486 "/></clipPath><clipPath id="f-clip-1"><path clip-rule="nonzero" d="M 256.74 572.98 L 265.16 618.05 L 280.5 638.07 L 315.02 638.07 C 315.02 638.07 330.03 578.07 346.87 548.16 C 346.87 548.16 366.83 496.82 406.80 498.85 C 382.72 485.57 363.77 486.55 363.77 486.55 C 363.77 486.55 363.46 486.53 362.86 486.53 C 354.86 486.53 296.02 489.44 256.74 572.98 "/></clipPath><linearGradient id="f-linear-pattern-0" gradientUnits="userSpaceOnUse" x1="-0.68" y1="0" x2="1.85" y2="0" gradientTransform="matrix(-70.53, 39.77, -39.77, -70.53, 372.56, 537.63)"><stop offset="0" stop-color="#236db3"/><stop offset="0.28" stop-color="#236cb2"/><stop offset="0.30" stop-color="#2368ae"/><stop offset="0.32" stop-color="#2465aa"/><stop offset="0.35" stop-color="#2562a7"/><stop offset="0.37" stop-color="#255fa3"/><stop offset="0.39" stop-color="#265ca0"/><stop offset="0.42" stop-color="#26599d"/><stop offset="0.44" stop-color="#275699"/><stop offset="0.46" stop-color="#285396"/><stop offset="0.49" stop-color="#285193"/><stop offset="0.51" stop-color="#294e90"/><stop offset="0.53" stop-color="#2a4b8d"/><stop offset="0.56" stop-color="#2b488a"/><stop offset="0.58" stop-color="#2b4587"/><stop offset="0.60" stop-color="#2c4284"/><stop offset="0.63" stop-color="#2d4081"/><stop offset="0.65" stop-color="#2d3d7e"/><stop offset="1" stop-color="#2e3c7d"/></linearGradient><clipPath id="f-clip-2"><path clip-rule="nonzero" d="M 320 385 L 408 385 L 408 473 L 320 473 Z M 320 385 "/></clipPath><clipPath id="f-clip-3"><path clip-rule="nonzero" d="M 320.76 429.09 C 320.76 452.95 340.10 472.29 363.96 472.29 C 387.82 472.29 407.16 452.95 407.16 429.09 C 407.16 405.23 387.82 385.89 363.96 385.89 C 340.10 385.89 320.76 405.23 320.76 429.09 "/></clipPath><linearGradient id="f-linear-pattern-1" gradientUnits="userSpaceOnUse" x1="-0.21" y1="0" x2="0.83" y2="0" gradientTransform="matrix(-98.51, 52.79, -52.79, -98.51, 394.72, 412.60)"><stop offset="0" stop-color="#236db3"/><stop offset="0.22" stop-color="#236cb2"/><stop offset="0.27" stop-color="#2369af"/><stop offset="0.32" stop-color="#2467ac"/><stop offset="0.36" stop-color="#2464a9"/><stop offset="0.41" stop-color="#2562a6"/><stop offset="0.46" stop-color="#255fa4"/><stop offset="0.50" stop-color="#265da1"/><stop offset="0.55" stop-color="#265a9e"/><stop offset="0.60" stop-color="#27589b"/><stop offset="0.64" stop-color="#275699"/><stop offset="0.69" stop-color="#285396"/><stop offset="0.74" stop-color="#285193"/><stop offset="0.78" stop-color="#294e91"/><stop offset="0.83" stop-color="#2a4c8e"/><stop offset="0.88" stop-color="#2a4a8b"/><stop offset="0.92" stop-color="#2b4789"/><stop offset="0.97" stop-color="#2b4586"/><stop offset="1" stop-color="#2c4485"/></linearGradient><clipPath id="f-clip-4"><path clip-rule="nonzero" d="M 110 402 L 316 402 L 316 695 L 110 695 Z M 110 402 "/></clipPath><clipPath id="f-clip-5"><path clip-rule="nonzero" d="M 110.46 402.23 C 132.02 562.77 186.17 643.53 186.17 643.53 C 217.46 696.57 252.46 694.08 252.46 694.08 C 294.71 694.08 315.02 638.07 315.02 638.07 C 278.42 623.75 242.15 523.38 235.08 501.46 C 228.01 479.53 219.52 466.18 219.52 466.18 C 180.58 404.28 119.33 402.22 111.33 402.22 C 110.76 402.22 110.46 402.23 110.46 402.23 "/></clipPath><linearGradient id="f-linear-pattern-2" gradientUnits="userSpaceOnUse" x1="-0.66" y1="0" x2="1.60" y2="0" gradientTransform="matrix(-121.98, 46.67, -46.67, -121.98, 266.44, 517.30)"><stop offset="0" stop-color="#236db3"/><stop offset="0.30" stop-color="#236cb2"/><stop offset="0.32" stop-color="#2369af"/><stop offset="0.34" stop-color="#2467ac"/><stop offset="0.37" stop-color="#2464a9"/><stop offset="0.39" stop-color="#2561a6"/><stop offset="0.41" stop-color="#255ea2"/><stop offset="0.44" stop-color="#265c9f"/><stop offset="0.46" stop-color="#27599c"/><stop offset="0.48" stop-color="#27569a"/><stop offset="0.51" stop-color="#285497"/><stop offset="0.53" stop-color="#285194"/><stop offset="0.55" stop-color="#294f91"/><stop offset="0.58" stop-color="#2a4c8e"/><stop offset="0.60" stop-color="#2a4a8b"/><stop offset="0.62" stop-color="#2b4789"/><stop offset="0.65" stop-color="#2b4486"/><stop offset="0.67" stop-color="#2c4283"/><stop offset="0.69" stop-color="#2d3f81"/><stop offset="0.72" stop-color="#2d3d7e"/><stop offset="1" stop-color="#2e3c7d"/></linearGradient><clipPath id="f-clip-6"><path clip-rule="nonzero" d="M 412 402 L 618 402 L 618 695 L 412 695 Z M 412 402 "/></clipPath><clipPath id="f-clip-7"><path clip-rule="nonzero" d="M 508.03 466.18 C 508.03 466.18 499.54 479.53 492.47 501.46 C 485.40 523.38 449.12 623.75 412.53 638.07 C 412.53 638.07 432.84 694.08 475.08 694.08 C 475.08 694.08 510.09 696.57 541.38 643.53 C 541.38 643.53 595.52 562.77 617.08 402.23 C 617.08 402.23 616.78 402.22 616.21 402.22 C 608.21 402.22 546.96 404.28 508.03 466.18 "/></clipPath><linearGradient id="f-linear-pattern-3" gradientUnits="userSpaceOnUse" x1="-0.82" y1="0" x2="1.34" y2="0" gradientTransform="matrix(-122.33, 33.23, -33.23, -122.33, 548.26, 546.40)"><stop offset="0" stop-color="#25afd9"/><stop offset="0.39" stop-color="#25aed9"/><stop offset="0.41" stop-color="#25aad7"/><stop offset="0.44" stop-color="#25a6d5"/><stop offset="0.46" stop-color="#24a3d3"/><stop offset="0.48" stop-color="#249fd1"/><stop offset="0.51" stop-color="#249ccf"/><stop offset="0.53" stop-color="#2498cd"/><stop offset="0.55" stop-color="#2495cb"/><stop offset="0.58" stop-color="#2391c9"/><stop offset="0.60" stop-color="#238ec7"/><stop offset="0.62" stop-color="#238bc5"/><stop offset="0.65" stop-color="#2387c3"/><stop offset="0.67" stop-color="#2384c1"/><stop offset="0.69" stop-color="#2381bf"/><stop offset="0.72" stop-color="#237dbd"/><stop offset="0.74" stop-color="#237abb"/><stop offset="0.76" stop-color="#2377b9"/><stop offset="0.79" stop-color="#2374b7"/><stop offset="0.81" stop-color="#2370b5"/><stop offset="0.83" stop-color="#236db4"/><stop offset="1" stop-color="#236db3"/></linearGradient></defs><g clip-path="url(#f-clip-0)"><g clip-path="url(#f-clip-1)"><path fill-rule="nonzero" fill="url(#f-linear-pattern-0)" d="M 472.04 601.27 L 370.59 421.36 L 191.49 522.36 L 292.94 702.27 Z M 472.04 601.27 "/></g></g><g clip-path="url(#f-clip-2)"><g clip-path="url(#f-clip-3)"><path fill-rule="nonzero" fill="url(#f-linear-pattern-1)" d="M 443.14 453.01 L 387.89 349.92 L 284.79 405.17 L 340.04 508.26 Z M 443.14 453.01 "/></g></g><g clip-path="url(#f-clip-4)"><g clip-path="url(#f-clip-5)"><path fill-rule="nonzero" fill="url(#f-linear-pattern-2)" d="M 413.26 658.98 L 288.90 333.95 L 12.23 439.81 L 136.58 764.83 Z M 413.26 658.98 "/></g></g><path fill-rule="nonzero" fill="#25afd9" d="M 406.80 498.85 C 366.83 496.82 346.87 548.16 346.87 548.16 C 352.46 538.24 358.26 531.62 363.77 531.62 C 385.89 531.62 412.53 638.07 412.53 638.07 L 458.64 638.07 L 470.81 572.98 C 451.41 531.73 427.25 510.14 406.80 498.85 "/><g clip-path="url(#f-clip-6)"><g clip-path="url(#f-clip-7)"><path fill-rule="nonzero" fill="url(#f-linear-pattern-3)" d="M 691.55 676.33 L 603.02 350.47 L 338.06 422.45 L 426.58 748.32 Z M 691.55 676.33 "/></g></g><path fill-rule="nonzero" class="wm-a" d="M 731.5 589.53 L 701.94 486.26 L 725.80 486.26 L 742.89 558.02 L 743.75 558.02 L 762.61 486.26 L 783.03 486.26 L 801.84 558.17 L 802.75 558.17 L 819.84 486.26 L 843.69 486.26 L 814.14 589.53 L 792.86 589.53 L 773.20 522.01 L 772.39 522.01 L 752.77 589.53 Z M 731.5 589.53 "/><path fill-rule="nonzero" class="wm-a" d="M 884.27 589.53 L 862.44 589.53 L 862.44 486.26 L 884.27 486.26 Z M 884.27 589.53 "/><path fill-rule="nonzero" class="wm-a" d="M 905.44 504.26 L 905.44 486.26 L 990.26 486.26 L 990.26 504.26 L 958.64 504.26 L 958.64 589.53 L 937.06 589.53 L 937.06 504.26 Z M 905.44 504.26 "/><path fill-rule="nonzero" class="wm-a" d="M 1011.38 589.53 L 1011.38 486.26 L 1033.21 486.26 L 1033.21 528.87 L 1077.53 528.87 L 1077.53 486.26 L 1099.32 486.26 L 1099.32 589.53 L 1077.53 589.53 L 1077.53 546.87 L 1033.21 546.87 L 1033.21 589.53 Z M 1011.38 589.53 "/><path fill-rule="nonzero" class="wm-a" d="M 1146.26 589.53 L 1124.42 589.53 L 1124.42 486.26 L 1146.26 486.26 Z M 1146.26 589.53 "/><path fill-rule="nonzero" class="wm-a" d="M 1257.74 486.26 L 1257.74 589.53 L 1238.88 589.53 L 1193.95 524.53 L 1193.19 524.53 L 1193.19 589.53 L 1171.36 589.53 L 1171.36 486.26 L 1190.52 486.26 L 1235.10 551.21 L 1236.00 551.21 L 1236.00 486.26 Z M 1257.74 486.26 "/><path fill-rule="nonzero" class="wm-b" d="M 1395.13 518.89 C 1394.15 515.83 1392.85 513.08 1391.22 510.64 C 1389.59 508.21 1387.65 506.12 1385.40 504.39 C 1383.14 502.66 1380.58 501.34 1377.71 500.43 C 1374.83 499.52 1371.68 499.07 1368.25 499.07 C 1362.43 499.07 1357.19 500.57 1352.52 503.56 C 1347.84 506.55 1344.16 510.93 1341.45 516.69 C 1338.74 522.46 1337.39 529.51 1337.39 537.85 C 1337.39 546.22 1338.75 553.30 1341.48 559.08 C 1344.20 564.86 1347.93 569.25 1352.67 572.24 C 1357.41 575.23 1362.80 576.73 1368.85 576.73 C 1374.47 576.73 1379.37 575.58 1383.55 573.30 C 1387.74 571.01 1390.98 567.78 1393.29 563.59 C 1395.59 559.41 1396.74 554.47 1396.74 548.79 L 1400.78 549.55 L 1371.23 549.55 L 1371.23 536.69 L 1411.82 536.69 L 1411.82 548.44 C 1411.82 557.11 1409.98 564.63 1406.30 571.00 C 1402.62 577.37 1397.54 582.29 1391.07 585.75 C 1384.60 589.21 1377.19 590.95 1368.85 590.95 C 1359.51 590.95 1351.32 588.80 1344.27 584.49 C 1337.23 580.19 1331.74 574.08 1327.81 566.16 C 1323.87 558.25 1321.91 548.84 1321.91 537.95 C 1321.91 529.71 1323.05 522.32 1325.34 515.76 C 1327.62 509.21 1330.84 503.63 1335 499.05 C 1339.15 494.46 1344.04 490.94 1349.67 488.51 C 1355.30 486.07 1361.46 484.85 1368.15 484.85 C 1373.73 484.85 1378.93 485.67 1383.76 487.32 C 1388.58 488.97 1392.89 491.30 1396.66 494.33 C 1400.45 497.35 1403.58 500.94 1406.07 505.10 C 1408.56 509.25 1410.24 513.84 1411.11 518.89 Z M 1395.13 518.89 "/><path fill-rule="nonzero" class="wm-b" d="M 1482.57 542.94 L 1508.08 589.53 L 1490.33 589.53 L 1465.32 542.94 Z M 1431.58 589.53 L 1431.58 486.26 L 1468.40 486.26 C 1476.40 486.26 1483.05 487.64 1488.34 490.40 C 1493.64 493.16 1497.59 496.96 1500.21 501.82 C 1502.83 506.67 1504.15 512.28 1504.15 518.64 C 1504.15 524.96 1502.83 530.51 1500.19 535.30 C 1497.55 540.09 1493.58 543.82 1488.29 546.47 C 1483 549.13 1476.35 550.46 1468.35 550.46 L 1440.46 550.46 L 1440.46 537.04 L 1466.93 537.04 C 1471.98 537.04 1476.08 536.32 1479.26 534.87 C 1482.44 533.42 1484.77 531.33 1486.25 528.57 C 1487.73 525.81 1488.46 522.50 1488.46 518.64 C 1488.46 514.74 1487.72 511.36 1486.22 508.50 C 1484.73 505.64 1482.39 503.45 1479.21 501.92 C 1476.03 500.39 1471.87 499.62 1466.73 499.62 L 1447.17 499.62 L 1447.17 589.53 Z M 1431.58 589.53 "/><path fill-rule="nonzero" class="wm-b" d="M 1597.44 537.90 C 1597.44 529.5 1596.08 522.41 1593.38 516.64 C 1590.67 510.88 1586.97 506.51 1582.28 503.53 C 1577.59 500.56 1572.29 499.07 1566.37 499.07 C 1560.42 499.07 1555.11 500.56 1550.44 503.53 C 1545.76 506.51 1542.08 510.88 1539.37 516.64 C 1536.66 522.41 1535.31 529.5 1535.31 537.90 C 1535.31 546.30 1536.66 553.39 1539.37 559.15 C 1542.08 564.92 1545.76 569.29 1550.44 572.26 C 1555.11 575.24 1560.42 576.73 1566.37 576.73 C 1572.29 576.73 1577.59 575.24 1582.28 572.26 C 1586.97 569.29 1590.67 564.92 1593.38 559.15 C 1596.08 553.39 1597.44 546.30 1597.44 537.90 M 1612.87 537.90 C 1612.87 548.92 1610.85 558.40 1606.82 566.31 C 1602.78 574.23 1597.26 580.32 1590.25 584.57 C 1583.24 588.82 1575.28 590.95 1566.37 590.95 C 1557.43 590.95 1549.46 588.82 1542.45 584.57 C 1535.44 580.32 1529.92 574.22 1525.88 566.29 C 1521.85 558.35 1519.83 548.89 1519.83 537.90 C 1519.83 526.87 1521.85 517.40 1525.88 509.48 C 1529.92 501.57 1535.44 495.48 1542.45 491.23 C 1549.46 486.98 1557.43 484.85 1566.37 484.85 C 1575.28 484.85 1583.24 486.98 1590.25 491.23 C 1597.26 495.48 1602.78 501.57 1606.82 509.48 C 1610.85 517.40 1612.87 526.87 1612.87 537.90 "/><path fill-rule="nonzero" class="wm-b" d="M 1698.64 486.26 L 1714.27 486.26 L 1714.27 554.19 C 1714.27 561.41 1712.57 567.81 1709.18 573.37 C 1705.78 578.94 1701.01 583.31 1694.86 586.48 C 1688.71 589.66 1681.5 591.25 1673.23 591.25 C 1664.99 591.25 1657.79 589.66 1651.64 586.48 C 1645.49 583.31 1640.71 578.94 1637.32 573.37 C 1633.92 567.81 1632.23 561.41 1632.23 554.19 L 1632.23 486.26 L 1647.81 486.26 L 1647.81 552.92 C 1647.81 557.60 1648.84 561.75 1650.91 565.38 C 1652.98 569.01 1655.91 571.86 1659.71 573.93 C 1663.51 576 1668.01 577.03 1673.23 577.03 C 1678.47 577.03 1683.00 576 1686.82 573.93 C 1690.63 571.86 1693.55 569.01 1695.59 565.38 C 1697.62 561.75 1698.64 557.60 1698.64 552.92 Z M 1698.64 486.26 "/><path fill-rule="nonzero" class="wm-b" d="M 1736.96 589.53 L 1736.96 486.26 L 1773.77 486.26 C 1781.81 486.26 1788.46 487.72 1793.74 490.65 C 1799.02 493.57 1802.97 497.57 1805.59 502.62 C 1808.21 507.68 1809.53 513.37 1809.53 519.69 C 1809.53 526.05 1808.21 531.76 1805.57 536.81 C 1802.93 541.87 1798.96 545.87 1793.67 548.82 C 1788.37 551.76 1781.73 553.23 1773.72 553.23 L 1748.41 553.23 L 1748.41 540.01 L 1772.31 540.01 C 1777.39 540.01 1781.51 539.13 1784.66 537.37 C 1787.82 535.60 1790.14 533.19 1791.62 530.13 C 1793.10 527.07 1793.84 523.59 1793.84 519.69 C 1793.84 515.80 1793.10 512.33 1791.62 509.31 C 1790.14 506.28 1787.82 503.91 1784.64 502.19 C 1781.46 500.48 1777.28 499.62 1772.11 499.62 L 1752.54 499.62 L 1752.54 589.53 Z M 1736.96 589.53 "/></svg>
+        <p class="signoff">Built from Within.</p>
       </div>
-
-      <div class="footer-right">
-        <div>© 2026 Within Group LLC. All rights reserved.</div>
-        <div class="legal">
-          This website is for informational purposes only and does not constitute an offer to sell or a solicitation to buy any securities.
-        </div>
-      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#buy-box">Buy box</a>
+        <a href="#sellers">Who we work with</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:info@within-group.com">info@within-group.com</a>
+        <a href="https://www.linkedin.com/company/within-group/" rel="me noopener" target="_blank">LinkedIn</a>
+      </nav>
+      <p class="legal">Within Group LLC sources and coordinates loan sale transactions on behalf of its capital partner. Within Group is not a broker-dealer and does not offer or solicit securities. All indications of interest are non-binding and subject to diligence, documentation, and capital partner approval. This website is for informational purposes only.</p>
+      <p class="copyright">© 2026 Within Group LLC. New York, NY.</p>
     </div>
   </footer>
-<script src="script.js"></script>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
