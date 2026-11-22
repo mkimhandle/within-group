@@ -175,15 +175,17 @@
       var ax = ar.left - hr.left, ay = ar.top - hr.top, aw = ar.width, ah = ar.height;
       var reserve = 44;                            // room for the status line
       var aspect = W_POINTS.aspect;
-      var mw = Math.min(aw * 0.9, (ah - reserve) * aspect * 0.86);
+      var TAPE_X = 1.08, TAPE_Y = 1.16;          // tape is a little larger than the mark
+      var mw = Math.min(aw / TAPE_X, (ah - reserve) * aspect * 0.86);
       var mh = mw / aspect;
-      var mx = ax + (aw - mw) / 2;
+      // align the tape's right edge with the page margin
+      var mx = ax + aw - mw * TAPE_X + (mw * TAPE_X - mw) / 2;
       var my = ay + (ah - reserve - mh) / 2;
 
       cell = mw / SRC_COLS;
       markSize = Math.max(2, cell * 0.5);
 
-      var tw = mw * 1.14, th = mh * 1.16;
+      var tw = mw * TAPE_X, th = mh * TAPE_Y;
       var tx0 = mx - (tw - mw) / 2, ty0 = my - (th - mh) / 2;
       tapeL = tx0; tapeR = tx0 + tw; tapeT = ty0; tapeB = ty0 + th;
       if (status) {
